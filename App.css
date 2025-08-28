@@ -1,0 +1,487 @@
+.mainhead {
+  position: absolute;
+  font-size: 45px;
+  left: 50.4%;
+  top: 5px;
+  transform: translateX(-50%);
+
+}
+
+html, body {
+  overflow: hidden;
+}
+
+.rada {
+  margin-top: 100px;
+}
+
+.bodyhead {
+  left: 1502.5px;
+  position: relative;
+  font-size: 30px;
+  top: -60px;
+
+
+}
+
+.exerhead {
+  left: 192px;
+  position: relative;
+  font-size: 30px;
+}
+
+.app-container {
+  position: absolute;
+  padding: 20px;
+  height: 1080px;
+  background-color: #f1f1f1;
+}
+
+.input-container {
+  display: flex;
+  align-items: flex-start;
+  top: -70px;
+  position: relative;
+}
+
+.center-box {
+  display: inline-block; /* Adjust width/height to content */
+  border-radius: 5px;
+  border: 2px solid #000; /* Black border */
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 172px;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  white-space: nowrap; /* Prevents text from wrapping */
+  min-width: 80px;
+  font-size: 19px;
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-input {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.placeholder-text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #999;
+}
+
+.selected-options {
+  display: flex;
+  flex-wrap: wrap;
+  width: 375px;
+  max-height: 500px;
+  overflow-y: auto;
+  border: 2px solid black;
+  padding: 6px;
+  border-radius: 5px;
+  background: white;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 2px;
+  background-color: #f1f1f1;
+}
+
+.remove-button {
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: red;
+  font-weight: bold;
+}
+
+/* Dropdown list container */
+.dropdown-list {
+  max-height: 570px; /* Adjust based on your design */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 200px;
+  list-style: none;
+  position: absolute;
+  background: white;
+  margin-top: 0px;
+  top: 216px; /* Adjust this to position it below the search input */
+  left: 25px;
+  z-index: 1; /* Ensures it appears above other elements */
+}
+
+.dropdown-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.center-box p {
+  margin: 0;
+  padding: 3px;
+  font-size: 16px; /* Adjust as needed */
+  color: #999; /* A light gray color for the default message */
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Body image container with proper positioning */
+.body-image-container {
+  position: absolute;
+  background-color: #FFFFFF;
+  padding: 30px;
+  width: 422px;
+  height: 600px;
+  top: 185px;
+  border-radius: 5px;
+  left: 1380px;
+  border: 2px solid black;/* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.body-diagram {
+  position: absolute;
+  width: 500px; /* Match original viewBox size */
+  height: 500px;
+  left: 30px
+}
+
+.body-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 30px /* Body image stays behind circles */
+}
+
+/* Additional CSS for SVG Circles */
+.muscle-circle {
+  transition: fill 0.3s ease;
+  position: absolute;
+}
+
+.app-container {
+  position: relative;
+}
+
+.showall {
+  position: absolute;
+  font-weight: bold;
+  background-color: #00FFFF;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid black;
+  border-radius: 5px;
+  top: 118px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.showall:hover {
+  background-color: #00CCCC;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh; /* Ensures full viewport height */
+}
+
+.box {
+  position: absolute;
+  width: 40%;
+  height: 100px; /* Adjust box height */
+  left: 50%;
+  top: 710px;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.text-row {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.gradient-bar {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 30px;
+  background: linear-gradient(to right, gray, rgb(128, 0, 255), rgb(0, 0, 255), rgb(0, 255, 0), rgb(255, 255, 0), rgb(255, 128, 0), rgb(255, 0, 0));
+  border-radius: 5px;
+}
+
+.left-text {
+  text-align: left;
+  flex: 1;
+  padding-left: 40px
+}
+
+.center-text {
+  text-align: center;
+  flex: 1;
+}
+
+.right-text {
+  text-align: right;
+  padding-right: 40px;
+  flex: 1;
+}
+
+.bar-number {
+  position: absolute;
+  top: -20px; /* Adjust to position above the bar */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bar-number.left {
+  left: 0;
+}
+
+.bar-number.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bar-number.right {
+  right: 0;
+}
+
+.setask {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid black;
+  border-radius: 5px;
+  top: 840px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #D670FF;
+  font-weight: bold;
+}
+
+.setask:hover {
+  background-color: #BE50E5;
+}
+
+.dimmed {
+  filter: brightness(0.5);
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
+  border: 2px solid black;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background-color: red;
+  color: white;
+  display: block;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+  font-weight: bold;
+  margin: 15px auto 0 auto;
+}
+
+.close-btn:hover {
+  background-color: rgb(180, 0, 0);
+}
+
+.save-btn {
+  position: absolute;
+  left: 58px;
+  border: 2px solid black;
+  border-radius: 5px;
+  top: 125.5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: rgb(0, 255, 0);
+  font-weight: bold;
+}
+
+.save-btn:hover {
+  background-color: #00CC00;
+}
+
+.view-btn {
+  position: absolute;
+  left: 492px;
+  border: 2px solid black;
+  border-radius: 5px;
+  top: 125.5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #FFA500;
+  font-weight: bold;
+}
+
+.view-btn:hover {
+  background-color: #E69500;
+}
+
+.saved-workouts {
+  position: absolute;
+  border: 2px solid black;
+  top: 10px;
+  left: 300px;
+}
+
+.workout-popup {
+  text-align: left;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.workout-item {
+  padding: 15px;
+  margin-bottom: 20px; /* Space between workouts */
+  border-bottom: 1px solid #ddd; /* Light separator */
+}
+
+.workout-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.workout-exercises {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.workout-list {
+  max-height: 700px; /* Limit height to avoid scrolling issues */
+  overflow-y: auto;
+  padding-right: 10px; /* Prevent text from sticking to the edge */
+}
+
+.workout-buttons {
+  display: flex;
+  gap: 10px; /* Space between Load and Delete buttons */
+  margin-top: 10px;
+}
+
+.load-btn {
+  background-color: #008CFF;
+  color: white;
+  border: 2px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.load-btn:hover {
+  background-color: #0077DD;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: 2px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: rgb(180, 0, 0);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #1e1e1e; /* Dark background */
+}
+
+.dark-mode .mainhead,
+.dark-mode .exerhead,
+.dark-mode .bodyhead {
+  color: white; /* Change header colors in dark mode */
+}
+
+/* Toggle Button */
+.dark-mode-toggle {
+  position: absolute;
+  font-weight: bold;
+  top: 10px;
+  right: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+/* Light mode button (dark background) */
+.dark-mode-toggle.light {
+  background-color: #f0f0f0; /* Light button */
+  color: black;
+}
+
+/* Dark mode button (light background) */
+.dark-mode-toggle.dark {
+  background-color: #1e1e1e; /* Dark button matches dark background */
+  color: white;
+}
+
+
+
+
+
+
+
+
