@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import bodyGram from "./2body.JPG";
-import "./App.css";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
