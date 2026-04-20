@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import bodyGram from "./2body.JPG";
+
+const DESIGN_WIDTH = 1920;
+const DESIGN_HEIGHT = 1080;
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -8,6 +11,24 @@ function App() {
   const [savedOptions, setSavedOptions] = useState([]);
   const [showAllMuscles, setShowAllMuscles] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
+  const [stageScale, setStageScale] = useState(1);
+
+  useEffect(() => {
+    const updateStageScale = () => {
+      const viewportWidth = window.visualViewport?.width || window.innerWidth;
+      const isMobileLayout = viewportWidth <= 760;
+      setStageScale(isMobileLayout ? 1 : viewportWidth / DESIGN_WIDTH);
+    };
+
+    updateStageScale();
+    window.addEventListener("resize", updateStageScale);
+    window.visualViewport?.addEventListener("resize", updateStageScale);
+
+    return () => {
+      window.removeEventListener("resize", updateStageScale);
+      window.visualViewport?.removeEventListener("resize", updateStageScale);
+    };
+  }, []);
 
   const options = [
     { name: "Arnold Press", muscles: { delts: 1, shoulders: 0.5, triceps: 0.5, traps: 0.25 } },
@@ -215,6 +236,14 @@ function App() {
 
 
   return (
+    <div
+      className={`viewport-shell ${darkMode ? "dark-mode" : ""}`}
+      style={{
+        "--stage-scale": stageScale,
+        "--stage-height": `${Math.ceil(DESIGN_HEIGHT * stageScale)}px`
+      }}
+    >
+      <div className="scale-shell">
     <div className={`app-container ${darkMode ? "dark-mode" : ""}`}>
           <button
             className={`dark-mode-toggle ${darkMode ? "light" : "dark"}`}
@@ -431,6 +460,8 @@ function App() {
         </svg>
       </div>
       
+    </div>
+      </div>
     </div>
   );
 }

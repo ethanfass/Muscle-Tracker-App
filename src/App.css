@@ -478,6 +478,296 @@ html, body {
   color: white;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+}
+
+.viewport-shell {
+  position: relative;
+  width: 100%;
+  min-height: max(100vh, var(--stage-height));
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+}
+
+.viewport-shell.dark-mode {
+  background-color: #1e1e1e;
+}
+
+.scale-shell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  transform: scale(var(--stage-scale));
+  transform-origin: top left;
+}
+
+.app-container {
+  width: 1920px;
+  height: 1080px;
+  min-height: 1080px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 760px) {
+  .viewport-shell {
+    min-height: 100vh;
+  }
+
+  .scale-shell {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 16px;
+  }
+
+  .mainhead,
+  .bodyhead,
+  .exerhead,
+  .input-container,
+  .center-box,
+  .body-image-container,
+  .box,
+  .setask,
+  .showall,
+  .save-btn,
+  .view-btn,
+  .dark-mode-toggle,
+  .dropdown-list {
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .dark-mode-toggle {
+    order: 0;
+    align-self: flex-end;
+    padding: 8px 12px;
+  }
+
+  .mainhead {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  .rada {
+    display: none;
+  }
+
+  .exerhead {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .input-container {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .selected-options {
+    width: 100%;
+    min-height: 64px;
+    max-height: 180px;
+    box-sizing: border-box;
+  }
+
+  .placeholder-text {
+    display: block;
+    width: 100%;
+    left: auto;
+    transform: none;
+    text-align: center;
+  }
+
+  .dropdown-list {
+    order: 4;
+    width: 100%;
+    max-height: 210px;
+    z-index: 20;
+  }
+
+  .save-btn,
+  .view-btn,
+  .showall,
+  .setask {
+    width: 100%;
+    max-width: 360px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .save-btn {
+    order: 5;
+  }
+
+  .view-btn {
+    order: 6;
+  }
+
+  .showall {
+    order: 7;
+  }
+
+  .center-box {
+    order: 8;
+    width: 100%;
+    max-width: 420px;
+    padding: 12px;
+    white-space: normal;
+    font-size: 16px;
+  }
+
+  .center-box li {
+    padding: 2px 0;
+  }
+
+  .bodyhead {
+    order: 9;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .body-image-container {
+    order: 10;
+    position: relative;
+    width: min(486px, calc(100vw - 32px));
+    height: auto;
+    aspect-ratio: 486 / 664;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .body-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 87.45%;
+    height: auto;
+    padding: 6.18%;
+    z-index: 0;
+    box-sizing: content-box;
+  }
+
+  .body-diagram {
+    position: absolute;
+    top: 0;
+    left: 6.18%;
+    width: 102.88%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+  }
+
+  .box {
+    order: 11;
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 96px;
+  }
+
+  .text-row {
+    font-size: 14px;
+  }
+
+  .left-text {
+    padding-left: 10px;
+  }
+
+  .right-text {
+    padding-right: 10px;
+  }
+
+  .setask {
+    order: 12;
+  }
+
+  .popup-box {
+    width: calc(100vw - 32px);
+    max-width: 600px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  .workout-popup {
+    max-width: calc(100vw - 32px);
+  }
+
+  .workout-list {
+    max-height: calc(100vh - 150px);
+  }
+}
+
+@media (max-width: 420px) {
+  .mainhead {
+    font-size: 26px;
+  }
+
+  .dark-mode-toggle {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .text-row {
+    font-size: 12px;
+  }
+
+  .bar-number {
+    font-size: 12px;
+  }
+
+  .selected-option {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
 
 
 
